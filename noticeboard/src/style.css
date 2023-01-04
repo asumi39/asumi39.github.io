@@ -1,0 +1,30 @@
+body {
+	background: url(https://www.asumi.xyz/img/1129086.png) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+div {
+	width: 90%;
+	border: 25px;
+	padding: 25px;
+	margin: 25px auto;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 10px;
+}
+img {height: auto; width: auto\9; width:100%;}
+.hr-solid {
+	border: 0;
+	border-top: 1px solid #d0d0d5;
+}
+.hr-dashed {
+	border: 0;
+	border-top: 1px dashed #a2a9b6;
+}
+.hr-dashed2 {
+	border: 0;
+	border-top: 2px dashed #a2a9b6;
+}
+ *{  
+            margin: 0px;  
+            padding: 0px;  
+        }  

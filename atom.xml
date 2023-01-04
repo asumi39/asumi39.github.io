@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>明純的個人部落格</title>
+  
+  
+  <link href="https://www.asumi.xyz/atom.xml" rel="self"/>
+  
+  <link href="https://www.asumi.xyz/"/>
+  <updated>2022-11-26T05:33:42.946Z</updated>
+  <id>https://www.asumi.xyz/</id>
+  
+  <author>
+    <name>明純</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>建站小記</title>
+    <link href="https://www.asumi.xyz/2022/12/27/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%A8%98/"/>
+    <id>https://www.asumi.xyz/2022/12/27/%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%A8%98/</id>
+    <published>2022-12-27T12:05:06.824Z</published>
+    <updated>2022-11-26T05:33:42.946Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>得失難兩全，取捨須三思。</p><h2 id="建站背景"><a href="#建站背景" class="headerlink" title="建站背景"></a>建站背景</h2><p>　　PRC疫情防控愈發嚴格，我所在的城市也難逃封控的命運。封控當下，作為在校生的我也不得不回家上網課。機緣巧合之下，我再次拾起了之前一直都希望建立部落格的夢想。</p><h2 id="建站過程"><a href="#建站過程" class="headerlink" title="建站過程"></a>建站過程</h2><p>　　決定好建立部落格後，我便在因特網上大量尋找各種資料。我首先藉助原本的一些HTML和CSS知識，獨立寫代碼，製作了一個簡單的站點，並將其部署到了GitHub的伺服器上，站點基本完成後，我卻發現效果不夠理想。看到其他人的部落格都有著精美的頁面以及各種插件，我也心生嚮往，於是便將先前的站點整個推倒重來，做出了如今的網站。<br>　　我從頭開始學習了Hexo框架的基本知識，瞭解了如何用Hexo這一優秀的部落格框架來部署部落格。好在Hexo建站相對容易，再加上我本身的一些HTML代碼基礎，這一過程並沒有遇到特別大的困難。<br>　　網站建成後，我又瞭解到Butterfly這一精美的Hexo主題，基於它對網站進行了大量的美化，最終達到了現在這樣讓我比較滿意的效果。</p><h2 id="得失"><a href="#得失" class="headerlink" title="得失"></a>得失</h2><p>　　建立這一網站，令我對網頁前端以及網頁部署等知識有了更深刻的認識，也實現了我一直以來擁有一個部落格的夢想。但凡事有得便有失，這幾天的建站經歷，令我的網課幾乎完全荒廢掉了，正所謂有得必有失。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://www.asumi.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+    <category term="日常" scheme="https://www.asumi.xyz/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+    <category term="雜談" scheme="https://www.asumi.xyz/tags/%E9%9B%9C%E8%AB%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小米手機刷機記錄</title>
+    <link href="https://www.asumi.xyz/2022/11/26/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%A9%9F%E5%88%B7%E6%A9%9F%E8%A8%98%E9%8C%84/"/>
+    <id>https://www.asumi.xyz/2022/11/26/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%A9%9F%E5%88%B7%E6%A9%9F%E8%A8%98%E9%8C%84/</id>
+    <published>2022-11-26T05:43:27.000Z</published>
+    <updated>2022-12-31T09:23:37.188Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>自從MIUI內置國家反詐中心開始，其隱私性問題愈發嚴重。並且MIUI較爲臃腫，Bug也層出不窮。因此我決定爲手機刷入類原生安卓系統。</p><h2 id="選擇"><a href="#選擇" class="headerlink" title="選擇"></a>選擇</h2><p>綜合考慮各種第三方ROM後，我最終選擇了Evolution X。該ROM可定製性、性能與穩定性都相對較好，且最新版已升級到了Android 13。</p><h2 id="解Bootloader鎖及備份數據"><a href="#解Bootloader鎖及備份數據" class="headerlink" title="解Bootloader鎖及備份數據"></a>解Bootloader鎖及備份數據</h2><p>第一步便是爲手機解Bootloader鎖，小米對刷機的支援較好，官方即提供了解鎖工具，用該工具可一鍵解除Bootloader鎖。<br>解除Bootloader鎖會導致手機數據清空，因此需要提前備份好手機中的資料。爲此，我採用的方式是直接連接電腦，訪問手機文件並將相冊全部拷貝到電腦上。至於微信、QQ等IM程式的聊天記錄，則直接使用自帶的聊天記錄遷移功能遷移至其他設備。</p><h2 id="刷入TWRP"><a href="#刷入TWRP" class="headerlink" title="刷入TWRP"></a>刷入TWRP</h2><p>解鎖完成後便要爲手機刷入第三方的Recovery，我選擇的是最常用的TWRP，大多數的機型都可直接從其官網下載TWRP。<br>下載好TWRP後，需要下載ADB工具包，使用ADB工具包將TWRP刷入手機。<br>用USB線將手機連接到電腦後，用終端cd到ADB工具包的解壓目錄，輸入以下命令進入Bootloader界面</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb reboot bootloader</span><br></pre></td></tr></table></figure><p>進入Bootloader界面後輸入以下指令進入Fastboot模式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot devices</span><br></pre></td></tr></table></figure><p>之後再輸入以下指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot flash recovery &quot;TWRP的img文件路徑&quot;</span><br></pre></td></tr></table></figure><p>這樣就刷好TWRP了，輸入以下指令重啓手機</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure><p>若進入TWRP後，詢問”是否保持系統分區爲只讀“，要滑動按鈕允許修改，以防止手機系統自動替換爲官方Recovery</p><h2 id="正式刷入系統"><a href="#正式刷入系統" class="headerlink" title="正式刷入系統"></a>正式刷入系統</h2><p>刷入系統前，首先要下載好要刷入的對應機型ROM固件包。<br>在TWRP主頁，找到“清除”按鈕，點擊它後，在出現的界面中滑動底部的按鈕以清除手機。<br>清除完成後，回到主頁，點擊“安裝”按鈕，找到下載的ROM固件包，我使用的方法是將ROM固件包存到Type-C接口的U盤中，再將其連接至手機，直接使用保存在U盤中的固件包。<br>選擇好固件包後，點擊“刷入鏡像”後，在進入的界面滑動屏幕底部按鈕確認刷入。<br>耐心等待，當提示“完成”後，便可點擊底部的“重啓系統”按鈕，進入新刷入的系統。</p><h2 id="刷入面具"><a href="#刷入面具" class="headerlink" title="刷入面具"></a>刷入面具</h2><p>至此，系統便成功刷入了手機。但只刷入系統當然是不夠的。爲了更好地自定義手機系統，還需要爲手機刷入面具。<br>首先要啓動手機，下載安裝Magisk。然後將之前下載的ROM固件解壓，找到其中的boot.img，將其保存到手機。進入Magisk，在主頁點擊Magisk旁邊的“安裝”，在新進入的界面點擊“下一步”，在“方式”中點擊“選擇並修補一個文件”，找到並選擇之前保存的boot.img文件，然後點擊“開始”，顯示“All Done”後即成功。<br>修補好文件後，修改好的鏡像會保存在手機的“下載”文件夾中，將其保存至電腦。<br>再次將手機連接至電腦，用終端cd到ADB工具包的解壓目錄，依次輸入以下命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb reboot bootloader</span><br><span class="line">fastboot flash boot &quot;修改後的鏡像文件路徑&quot;</span><br><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure><p>至此，手機便成功刷入了面具，之後便可以用面具控制手機的Root權限及加載各種模塊了。</p><h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>刷機需謹慎，不建議零基礎的人嘗試</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="科技" scheme="https://www.asumi.xyz/categories/%E7%A7%91%E6%8A%80/"/>
+    
+    
+    <category term="日常" scheme="https://www.asumi.xyz/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+    <category term="科技" scheme="https://www.asumi.xyz/tags/%E7%A7%91%E6%8A%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>關於我</title>
+    <link href="https://www.asumi.xyz/2022/11/24/%E9%97%9C%E6%96%BC/"/>
+    <id>https://www.asumi.xyz/2022/11/24/%E9%97%9C%E6%96%BC/</id>
+    <published>2022-11-24T01:38:22.000Z</published>
+    <updated>2022-11-24T15:05:35.009Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>歡迎造訪我的博客</p><h2 id="聯絡方式"><a href="#聯絡方式" class="headerlink" title="聯絡方式"></a>聯絡方式</h2><h3 id="微信："><a href="#微信：" class="headerlink" title="微信："></a>微信：</h3><p>mc2006f</p><h3 id="QQ："><a href="#QQ：" class="headerlink" title="QQ："></a>QQ：</h3><p>852045941</p><h3 id="郵箱："><a href="#郵箱：" class="headerlink" title="郵箱："></a>郵箱：</h3><p><a href="mailto:&#109;&#x63;&#50;&#48;&#48;&#x36;&#102;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#109;">&#109;&#x63;&#50;&#48;&#48;&#x36;&#102;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#109;</a></p><p><a href="mailto:&#108;&#119;&#x79;&#50;&#48;&#48;&#x36;&#102;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#108;&#119;&#x79;&#50;&#48;&#48;&#x36;&#102;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a></p><p>###手提電話：</p><p>+86-19135319120</p><h3 id="Discord："><a href="#Discord：" class="headerlink" title="Discord："></a>Discord：</h3><p>明純#6787</p><h2 id="興趣愛好"><a href="#興趣愛好" class="headerlink" title="興趣愛好"></a>興趣愛好</h2><p>原神(刻晴單推人)</p><p>VOCALOID</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://www.asumi.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+    <category term="日常" scheme="https://www.asumi.xyz/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+</feed>
