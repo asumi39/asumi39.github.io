@@ -67,7 +67,7 @@
 
   <url>
     <loc>https://www.asumi.xyz/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,21 +75,21 @@
   
   <url>
     <loc>https://www.asumi.xyz/tags/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2023-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.asumi.xyz/tags/%E7%A7%91%E6%8A%80/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.asumi.xyz/tags/%E9%9B%9C%E8%AB%87/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.asumi.xyz/tags/%E7%A7%91%E6%8A%80/</loc>
+    <lastmod>2023-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -97,15 +97,15 @@
 
   
   <url>
-    <loc>https://www.asumi.xyz/categories/%E7%A7%91%E6%8A%80/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <loc>https://www.asumi.xyz/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2023-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.asumi.xyz/categories/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <loc>https://www.asumi.xyz/categories/%E7%A7%91%E6%8A%80/</loc>
+    <lastmod>2023-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
