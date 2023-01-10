@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>明純的個人部落格</title>
+  <title>Asumi&#39;s Blog</title>
   
   
   <link href="https://www.asumi.xyz/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://www.asumi.xyz/</id>
   
   <author>
-    <name>明純</name>
+    <name>Asumi</name>
     
   </author>
   
