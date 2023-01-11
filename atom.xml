@@ -70,28 +70,4 @@
     
   </entry>
   
-  <entry>
-    <title>關於我</title>
-    <link href="https://www.asumi.xyz/2022/11/24/%E9%97%9C%E6%96%BC/"/>
-    <id>https://www.asumi.xyz/2022/11/24/%E9%97%9C%E6%96%BC/</id>
-    <published>2022-11-24T01:38:22.000Z</published>
-    <updated>2023-01-10T10:32:26.585Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>歡迎造訪我的Blog</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="日常" scheme="https://www.asumi.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    
-    <category term="日常" scheme="https://www.asumi.xyz/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-  </entry>
-  
 </feed>
