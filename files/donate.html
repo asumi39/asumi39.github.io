@@ -4,14 +4,12 @@
     <meta charset="utf-8">
     <title>捐贈</title>
   </head>
-  <body>
-    <header>
-    if 'MicroMessenger' in agent:
-      return redirect(wxp://f2f0JSojPpKeQxf9eDGL27LMDhQ9xTjYKUKhCHZGNybxWBw)
-    elif 'Alipay' in agent:
-      return redirect(https://qr.alipay.com/fkx17045n5ivpc60dksjwc7)
-    else:
-      return '請打開微信或支付寶掃描付款QR碼！'
-    </header>
-  </body>
+    <script type= "text/javascript" >
+      if 'MicroMessenger' in agent:
+        return redirect(wxp://f2f0JSojPpKeQxf9eDGL27LMDhQ9xTjYKUKhCHZGNybxWBw)
+      elif 'Alipay' in agent:
+        return redirect(https://qr.alipay.com/fkx17045n5ivpc60dksjwc7)
+      else:
+        return '請打開微信或支付寶掃描付款QR碼！'
+     </script>
 </html>
