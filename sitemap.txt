@@ -6,8 +6,8 @@ https://www.asumi.xyz/movies/index.html
 https://www.asumi.xyz/link/index.html
 https://www.asumi.xyz/categories/index.html
 https://www.asumi.xyz/
-https://www.asumi.xyz/tags/%E6%97%A5%E5%B8%B8/
 https://www.asumi.xyz/tags/%E7%A7%91%E6%8A%80/
 https://www.asumi.xyz/tags/%E9%81%8A%E6%88%B2/
 https://www.asumi.xyz/tags/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AA%9E/
+https://www.asumi.xyz/tags/%E6%97%A5%E5%B8%B8/
 https://www.asumi.xyz/categories/%E7%A7%91%E6%8A%80/
