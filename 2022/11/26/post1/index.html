@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>小米手機刷機記錄 | Asumi's Blog</title><meta name="author" content="Asumi"><meta name="copyright" content="Asumi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="解Bootloader鎖及備份數據首先要為手機解除Bootloader鎖，推薦使用小米官方提供的解鎖工具，用該工具可一鍵解除Bootloader鎖。解除Bootloader鎖會清空手機所有數據，因此需要提前備份好手機中的資料。 刷入TWRP解鎖完成後便要爲手機刷入第三方的Recovery，我選擇的是TWRP，很多機型都可直接從其官網下載TWRP，官網中沒有的機型則需自行尋找民間版本。下載好TWRP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小米手機刷機記錄">
+<meta property="og:url" content="https://www.asumi.xyz/2022/11/26/post1/index.html">
+<meta property="og:site_name" content="Asumi&#39;s Blog">
+<meta property="og:description" content="解Bootloader鎖及備份數據首先要為手機解除Bootloader鎖，推薦使用小米官方提供的解鎖工具，用該工具可一鍵解除Bootloader鎖。解除Bootloader鎖會清空手機所有數據，因此需要提前備份好手機中的資料。 刷入TWRP解鎖完成後便要爲手機刷入第三方的Recovery，我選擇的是TWRP，很多機型都可直接從其官網下載TWRP，官網中沒有的機型則需自行尋找民間版本。下載好TWRP">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://www.asumi.xyz/img/img-20221006-134041-414.jpg">
+<meta property="article:published_time" content="2022-11-26T05:43:27.000Z">
+<meta property="article:modified_time" content="2023-06-07T14:53:04.245Z">
+<meta property="article:author" content="Asumi">
+<meta property="article:tag" content="日常">
+<meta property="article:tag" content="科技">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.asumi.xyz/img/img-20221006-134041-414.jpg"><link rel="shortcut icon" href="/img/avatar.png"><link rel="canonical" href="https://www.asumi.xyz/2022/11/26/post1/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":1,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小米手機刷機記錄',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-06-07 22:53:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> <script src="/live2d-widget/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Asumi's Blog" type="application/atom+xml">
+</head><body><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/img-20221006-134041-414.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Asumi's Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">小米手機刷機記錄</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2022-11-26T05:43:27.000Z" title="發表於 2022-11-26 13:43:27">2022-11-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2023-06-07T14:53:04.245Z" title="更新於 2023-06-07 22:53:04">2023-06-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A7%91%E6%8A%80/">科技</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="小米手機刷機記錄"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">評論數:</span><a href="/2022/11/26/post1/#post-comment"><span class="gitalk-comment-count"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="解Bootloader鎖及備份數據"><a href="#解Bootloader鎖及備份數據" class="headerlink" title="解Bootloader鎖及備份數據"></a>解Bootloader鎖及備份數據</h2><p>首先要為手機解除Bootloader鎖，推薦使用<a href=https://www.miui.com/unlock/index.html>小米官方提供的解鎖工具</a>，用該工具可一鍵解除Bootloader鎖。<br>解除Bootloader鎖會清空手機所有數據，因此需要提前備份好手機中的資料。</p>
+<h2 id="刷入TWRP"><a href="#刷入TWRP" class="headerlink" title="刷入TWRP"></a>刷入TWRP</h2><p>解鎖完成後便要爲手機刷入第三方的Recovery，我選擇的是TWRP，很多機型都可直接從其<a href=https://twrp.me/>官網</a>下載TWRP，官網中沒有的機型則需自行尋找民間版本。<br>下載好TWRP後，需要下載<a href=https://developer.android.com/studio/releases/platform-tools>Platform-Tools工具包</a>，使用其中的工具將TWRP刷入手機。<br>用USB線將手機連接到電腦後，用終端進入到Platform-Tools的解壓目錄，輸入以下命令進入Bootloader界面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb reboot bootloader</span><br></pre></td></tr></table></figure>
+<p>進入Bootloader界面後輸入以下指令進入Fastboot模式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot devices</span><br></pre></td></tr></table></figure>
+<p>之後再輸入以下指令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot flash recovery &quot;TWRP的img文件路徑&quot;</span><br></pre></td></tr></table></figure>
+<p>這樣就刷好TWRP了，輸入以下指令重啟手機</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure>
+<p>若進入TWRP後，詢問”是否保持系統分區為只讀“，要滑動按鈕允許修改，以防止手機系統自動替換回官方Recovery</p>
+<h2 id="正式刷入系統"><a href="#正式刷入系統" class="headerlink" title="正式刷入系統"></a>正式刷入系統</h2><p>刷入系統前，首先要下載好要刷入的對應機型ROM固件包。<br>在TWRP主頁，找到“清除”按鈕，點擊它後，在出現的界面中滑動底部的按鈕以清除手機。<br>清除完成後，回到主頁，點擊“安裝”按鈕，找到下載的ROM固件包，我使用的方法是將ROM固件包存到Type-C接口的U盤中，再將其連接至手機，直接使用保存在U盤中的固件包。<br>選擇好固件包後，點擊“刷入鏡像”後，在進入的界面滑動屏幕底部按鈕確認刷入。<br>耐心等待，當提示“完成”後，便可點擊底部的“重啟系統”按鈕，進入剛刷好的系統。</p>
+<h2 id="刷入面具"><a href="#刷入面具" class="headerlink" title="刷入面具"></a>刷入面具</h2><p>至此，系統便成功刷入了手機。但只刷入系統當然是不夠的。為了更好地自定義手機系統，還需要為手機刷入面具。<br>首先要啟動手機，下載安裝Magisk。然後將之前下載的系統ROM固件解壓，找到其中的boot.img，將其保存到手機。進入Magisk，在主頁點擊Magisk旁邊的“安裝”，在新進入的界面點擊“下一步”，在“方式”中點擊“選擇並修補一個文件”，找到並選擇之前保存的boot.img文件，然後點擊“開始”，顯示“All Done”後即成功。<br>修補好文件後，修改好的鏡像會保存在手機的“下載”文件夾中，將其保存至電腦。<br>再次將手機連接至電腦，用終端進入到Platform-Tools的解壓目錄，依次輸入以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb reboot bootloader</span><br><span class="line">fastboot flash boot &quot;修改後的鏡像文件路徑&quot;</span><br><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure>
+<p>至此，手機便成功刷入了面具，之後便可以用面具控制手機的Root權限及加載各種模塊了。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.asumi.xyz">Asumi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://www.asumi.xyz/2022/11/26/post1/">https://www.asumi.xyz/2022/11/26/post1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://www.asumi.xyz" target="_blank">Asumi's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%97%A5%E5%B8%B8/">日常</a><a class="post-meta__tags" href="/tags/%E7%A7%91%E6%8A%80/">科技</a></div><div class="post_share"><div class="social-share" data-image="/img/img-20221006-134041-414.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2023/01/10/post2/"><img class="prev-cover" src="/img/sg1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">使用frp內網穿透進行星露谷物語聯機</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相關推薦</span></div><div class="relatedPosts-list"><div><a href="/2023/01/10/post2/" title="使用frp內網穿透進行星露谷物語聯機"><img class="cover" src="/img/sg1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-10</div><div class="title">使用frp內網穿透進行星露谷物語聯機</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 評論</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Asumi</div><div class="author-info__description">心有所向，日復一日，必有精進</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/mc2006f"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/mc2006f" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lwy2006f@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3Bootloader%E9%8E%96%E5%8F%8A%E5%82%99%E4%BB%BD%E6%95%B8%E6%93%9A"><span class="toc-number">1.</span> <span class="toc-text">解Bootloader鎖及備份數據</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5TWRP"><span class="toc-number">2.</span> <span class="toc-text">刷入TWRP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%BC%8F%E5%88%B7%E5%85%A5%E7%B3%BB%E7%B5%B1"><span class="toc-number">3.</span> <span class="toc-text">正式刷入系統</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5%E9%9D%A2%E5%85%B7"><span class="toc-number">4.</span> <span class="toc-text">刷入面具</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/01/10/post2/" title="使用frp內網穿透進行星露谷物語聯機"><img src="/img/sg1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用frp內網穿透進行星露谷物語聯機"/></a><div class="content"><a class="title" href="/2023/01/10/post2/" title="使用frp內網穿透進行星露谷物語聯機">使用frp內網穿透進行星露谷物語聯機</a><time datetime="2023-01-10T04:06:23.000Z" title="發表於 2023-01-10 12:06:23">2023-01-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/26/post1/" title="小米手機刷機記錄"><img src="/img/img-20221006-134041-414.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小米手機刷機記錄"/></a><div class="content"><a class="title" href="/2022/11/26/post1/" title="小米手機刷機記錄">小米手機刷機記錄</a><time datetime="2022-11-26T05:43:27.000Z" title="發表於 2022-11-26 13:43:27">2022-11-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By Asumi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">簡</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直達評論"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'a5d633cfed08dfa69c23',
+      clientSecret: '2ce0fee2933628274f62ae805a35437f8a8578da',
+      repo: 'gitalk',
+      owner: 'mc2006f',
+      admin: ['mc2006f'],
+      id: '9560b4d582ee5ecbd9818f69c39b1bf1',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
